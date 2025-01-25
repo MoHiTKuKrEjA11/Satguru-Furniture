@@ -11,7 +11,7 @@ const Category = ({category}) => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((item) => (
             <div key={item.id} className="border p-4 rounded shadow hover:shadow-lg">
-              <img src={item.image} alt={item.name} className="w-full h-48 object-cover mb-4 rounded" />
+              <img src={item.url} alt={item.name} className="w-full h-48 object-contain mb-4 rounded" />
               <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
               <p className="text-lg text-gray-700 mb-2">Price: {item.price}</p>
               <button
@@ -23,6 +23,7 @@ const Category = ({category}) => {
             </div>
           ))}
         </div>
+        <h2 className='text-3xl font-bold mt-10'>We can make designs of your choice also. Please feel free to share it with us.</h2>
       </div>
     );
 }

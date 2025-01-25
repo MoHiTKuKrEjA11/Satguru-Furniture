@@ -10,7 +10,8 @@ const ItemDetail = ({ category, itemId }) => {
   
     return (
       <div className="p-6">
-        <img src={item.image} alt={item.name} className="w-full max-w-2xl mx-auto h-96 object-cover rounded mb-6" />
+        <img src={item.url} alt={item.name} className="w-full max-w-2xl mx-auto h-96 object-contain rounded mb-6" />
+        <a href={item.url} target='_blank' className="text-center p-6 block text-black no-underline hover:underline">View full Image</a>
         <h2 className="text-3xl font-bold mb-4">{item.name}</h2>
         <p className="text-xl text-gray-700 mb-2">Price: {item.price}</p>
         <p className="text-lg text-gray-600">{item.description}</p>
